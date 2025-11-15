@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: libreria-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - h2_data:/data
+    restart: on-failure
+
+volumes:
+  h2_data:
